@@ -1,5 +1,5 @@
 (function() {
-  function Room($firebaseArray) {
+  function Room($scope, $firebaseArray) {
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
 
