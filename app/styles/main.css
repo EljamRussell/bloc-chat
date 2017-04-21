@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *, *::before, *::after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -95,6 +94,9 @@ container {
 /* Large screens (1024px) */
 @media (min-width: 1024px) {
   html { font-size: 120%; }
+<<<<<<< HEAD
+}
+=======
 }
 =======
 *, *::before, *::after {
@@ -194,3 +196,4 @@ container {
 @media (min-width: 1024px) {
   html { font-size: 120%; }
 }
+>>>>>>> ba6d2d12895b84368c3135951c80125b0c886d52
