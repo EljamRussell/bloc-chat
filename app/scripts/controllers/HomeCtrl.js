@@ -17,10 +17,10 @@
                 home.messages = Message.getByRoomId(home.currentRoom.$id);
                 console.log(home.messages)
             }
-            
+
           }
 
      angular
          .module('blocChat')
-         .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl]);
+         .controller('HomeCtrl', ['Room', 'Message', '$uibModal', HomeCtrl]);
  })();

@@ -1,25 +1,17 @@
 (function() {
   function Message($firebaseArray) {
-    var ref = firebase.database().ref().child("messages");
+    var allmessagesRef = firebase.database().ref().child("messages");
 
-    var messages = $firebaseRef.child('messages');
+		var getByRoomId = function(roomId) {
+        console.log('Passed RoomId: ' + roomId);
+				console.log($firebaseArray(allmessagesRef));
+				return $firebaseArray(allmessagesRef.orderByChild("roomId").equalTo(roomId));
+		};
 
     return {
-			getByRoomId: function (roomId) {
-				return $firebaseArray(messages.orderByChild("roomId").equalTo(roomId));
-			}
-		};
+        getByRoomId: getByRoomId
+    }
 	}
-
-    /*var addRoom = function(room){
-       rooms.$add(room);
-     };
-
-    var room = {
-      all: rooms,
-      add: addRoom
- }
-*/
 
 
   angular
