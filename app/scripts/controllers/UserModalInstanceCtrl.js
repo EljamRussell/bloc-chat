@@ -6,7 +6,7 @@
 			console.log("You just created a new user: " + this.name);
 			console.log("You just created a new cookie: " + $cookies.blocChatCurrentUser);
 
-			$uibModalInstance.close(this.name);
+			$uibModalInstance.close($cookies.blocChatCurrentUser);
 		};
 	}
 
